@@ -1,0 +1,15 @@
+{
+  "ridge_alphas_tried": [
+    1.0,
+    10.0,
+    100.0
+  ],
+  "selection_rule": "Lowest mean five-fold training CV RMSE",
+  "selected_ridge_alphas": {
+    "2.1": 10.0,
+    "2.2": 10.0
+  },
+  "scaling": "StandardScaler fitted inside each training fold",
+  "cv_interpretation": "Selection scores, not independent post-selection estimates",
+  "test_history": "Original test outcomes were inspected in earlier drafts"
+}
