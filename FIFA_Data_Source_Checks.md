@@ -6,7 +6,7 @@ Checked on 13 October 2026.
 
 The strongest source match is [MD Mominul Islam's FIFA World Cup 2026 Dataset](https://github.com/mominullptr/FIFA-World-Cup-2026-Dataset), also distributed on [Kaggle](https://www.kaggle.com/datasets/mominullptr/fifa-world-cup-2026-dataset).
 
-The file names and 60-column feature schema match. All 48 team names, FIFA ranks and Elo values were compared with the repository generator table and match the supplied feature file. This establishes consistency with that source, not a byte-for-byte match of the complete CSV download. The team should confirm its downloaded version and retrieval date.
+The file names and 60-column feature schema match. All 48 team names, FIFA ranks and Elo values were compared with the repository generator table and match the supplied feature file. This establishes consistency with that source, not a byte-for-byte match of the complete CSV download. The exact downloaded version and retrieval date remain unconfirmed.
 
 ## Preparation details found
 
@@ -15,7 +15,7 @@ The file names and 60-column feature schema match. All 48 team names, FIFA ranks
 
 The first-match values therefore have a code-level explanation: prior goals 0, shots on target 4, possession 50%, saves 3 and rest 10 days are defaults, not measured prior form. Statistical justification for these prior values remains a limitation.
 
-Treat squad value as an estimated proxy. Do not describe every squad valuation as a verified Transfermarkt total. The generator labels star prices as a June 2026 snapshot; an exact pre-kickoff valuation date is not established.
+Squad value is an estimated proxy; the supplied valuations have not all been verified as Transfermarkt totals. The generator labels star prices as a June 2026 snapshot; an exact pre-kickoff valuation date is not established.
 
 ## Independent checks
 
@@ -38,6 +38,4 @@ All 104 scores agree internally between the supplied files. Only the three outco
 - Underlying event records or export metadata for shots, possession and saves.
 - A rationale or sensitivity check for fixed initial values.
 
-The source data paper contains an illustrative opener sample inconsistent with the current generator and the supplied score. Use the actual records and verified results, not that illustrative table, when reporting the score.
-
-The numerical analysis remains unchanged. Write the report discussion in the team's own words, describe these source limitations, and complete names and IDs in the outline.
+The source data paper contains an illustrative opener sample inconsistent with the current generator and the supplied score. The checks above use the actual supplied records and corroborated results.
