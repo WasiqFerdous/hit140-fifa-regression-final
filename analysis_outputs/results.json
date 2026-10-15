@@ -1,0 +1,169 @@
+{
+  "test_results": {
+    "2.1": {
+      "mae": 1.5750387238449115,
+      "rmse": 2.038824105035624,
+      "r2": -0.13157434906911858,
+      "intercept": 0.07280682919733283,
+      "coefficients": {
+        "ranking_diff": 0.007297577773646668,
+        "elo_diff": 0.003259063364640029,
+        "squad_value_diff": 0.00071574504646435,
+        "squad_age_diff": 0.05948878697760428,
+        "rest_days_diff": -0.28204092742966796,
+        "previous_goals_scored_diff": -0.261266715598499,
+        "previous_goals_conceded_diff": -0.3596804870128591,
+        "host_advantage": 0.7028077191668084
+      },
+      "cv_mean": {
+        "mae": 1.2189627188656398,
+        "rmse": 1.5271505487644028,
+        "r2": 0.21709368396995474
+      }
+    },
+    "2.2": {
+      "mae": 1.2497620601747916,
+      "rmse": 1.6548267931634286,
+      "r2": -0.1315598093032153,
+      "intercept": -6.727789025731774,
+      "coefficients": {
+        "team_fifa_rank": 0.005120110902169832,
+        "team_elo": 0.003774220064271583,
+        "team_prev_avg_goals_scored": -0.37035026040244756,
+        "opponent_prev_avg_goals_conceded": 0.44073474213304287,
+        "team_prev_avg_shots_on_target": 0.06839874118818293,
+        "team_prev_avg_possession": 0.02155061544402442,
+        "opponent_prev_avg_saves": -0.01791561763843476,
+        "is_knockout": -0.3586397369687035
+      },
+      "cv_mean": {
+        "mae": 0.9039995738684669,
+        "rmse": 1.2019367687619074,
+        "r2": 0.10920919335831829
+      }
+    }
+  },
+  "executed_code_cells": 25,
+  "cv_folds_per_model": 5,
+  "descriptive_statistics": {
+    "goal_difference": {
+      "mean": 0.4807692307692308,
+      "sd": 2.0240340821354774
+    },
+    "goals_scored": {
+      "mean": 1.4807692307692308,
+      "sd": 1.3934336641691936
+    }
+  },
+  "selected_ridge_alphas": {
+    "2.1": 10.0,
+    "2.2": 10.0
+  },
+  "comparison_results": [
+    {
+      "task": "2.1",
+      "model": "Mean",
+      "alpha": null,
+      "test_r2": -0.0035128466,
+      "test_mae": 1.4939759036,
+      "test_rmse": 1.9199931568,
+      "cv_r2": -0.2021660563,
+      "cv_mae": 1.6296954399,
+      "cv_rmse": 2.024461844
+    },
+    {
+      "task": "2.1",
+      "model": "OLS",
+      "alpha": null,
+      "test_r2": -0.1315743491,
+      "test_mae": 1.5750387238,
+      "test_rmse": 2.038824105,
+      "cv_r2": 0.217093684,
+      "cv_mae": 1.2189627189,
+      "cv_rmse": 1.5271505488
+    },
+    {
+      "task": "2.1",
+      "model": "Ridge",
+      "alpha": 10.0,
+      "test_r2": -0.098917025,
+      "test_mae": 1.5436456904,
+      "test_rmse": 2.0091884061,
+      "cv_r2": 0.2570808144,
+      "cv_mae": 1.2025752757,
+      "cv_rmse": 1.5000776862
+    },
+    {
+      "task": "2.2",
+      "model": "Mean",
+      "alpha": null,
+      "test_r2": -0.0099152845,
+      "test_mae": 1.3129661503,
+      "test_rmse": 1.5633501496,
+      "cv_r2": -0.0536430828,
+      "cv_mae": 1.0720415303,
+      "cv_rmse": 1.3166924443
+    },
+    {
+      "task": "2.2",
+      "model": "OLS",
+      "alpha": null,
+      "test_r2": -0.1315598093,
+      "test_mae": 1.2497620602,
+      "test_rmse": 1.6548267932,
+      "cv_r2": 0.1092091934,
+      "cv_mae": 0.9039995739,
+      "cv_rmse": 1.2019367688
+    },
+    {
+      "task": "2.2",
+      "model": "Ridge",
+      "alpha": 10.0,
+      "test_r2": -0.0761571972,
+      "test_mae": 1.2249290557,
+      "test_rmse": 1.6138071834,
+      "cv_r2": 0.1365401327,
+      "cv_mae": 0.902428251,
+      "cv_rmse": 1.189010174
+    }
+  ],
+  "diagnostics": [
+    {
+      "task": "2.1",
+      "model": "OLS",
+      "mean_residual": -0.0763245408,
+      "mae": 1.5750387238,
+      "rmse": 2.038824105,
+      "max_absolute_error": 4.7945118672,
+      "negative_predictions": 7
+    },
+    {
+      "task": "2.1",
+      "model": "Ridge",
+      "mean_residual": -0.0629312882,
+      "mae": 1.5436456904,
+      "rmse": 2.0091884061,
+      "max_absolute_error": 4.9133510903,
+      "negative_predictions": 7
+    },
+    {
+      "task": "2.2",
+      "model": "OLS",
+      "mean_residual": -0.1706342494,
+      "mae": 1.2497620602,
+      "rmse": 1.6548267932,
+      "max_absolute_error": 4.5677090499,
+      "negative_predictions": 0
+    },
+    {
+      "task": "2.2",
+      "model": "Ridge",
+      "mean_residual": -0.1704699144,
+      "mae": 1.2249290557,
+      "rmse": 1.6138071834,
+      "max_absolute_error": 4.3892814073,
+      "negative_predictions": 0
+    }
+  ],
+  "cv_note": "Ridge CV scores are used for selection; no nested-CV performance estimate is claimed."
+}
