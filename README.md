@@ -6,20 +6,6 @@ Python code and datasets for two regression tasks:
 
 The analysis compares ordinary least squares, a training-mean baseline and Ridge regression.
 
-## Run the notebook
-
-Keep the notebook and CSV files in the same folder. Open
-`FIFA_World_Cup_2026_Regression_Final.ipynb` and run the cells from top to bottom.
-
-## Run the Python script
-
-Install the packages and run the script:
-
-```bash
-python -m pip install -r requirements.txt
-python run_analysis.py
-```
-
 Figures, model datasets and result tables are saved in `analysis_outputs/`.
 
 ## Main files
